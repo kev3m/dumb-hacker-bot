@@ -3,21 +3,58 @@
 
 
 import string
-from random import random, choice
+from random import choice
 import time
 
 # string.ascii_uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 # string.digits = "0123456789"
 
 time.sleep(3)
-
 size = 5
 values = string.ascii_uppercase + string.digits
 password = ''
 for i in range(size):
     password += choice(values)
-
 print(password)
+
+
+# for i in range(1,10+1):
+#     time.sleep(1)
+#     size = 5
+#     values = string.ascii_uppercase + string.digits
+#     attempt = ''
+#     for i in range(size):
+#         attempt += choice(values)
+#         print(attempt)
+
+
+time.sleep(3)
+size = 5
+values = string.ascii_uppercase + string.digits
+attempt = ''
+for i in range(size):
+    attempt += choice(values)
+print(attempt)
+
+max_attempts = 0
+
+while attempt != password:
+    attempt = ''
+    time.sleep(1)
+    for elements in range(size):
+        attempt += choice(values)
+        print(attempt)
+        max_attempts += 1
+    if attempt == password or max_attempts == 10:
+        print('Chega fi, cabô')
+        break
+
+
+
+
+
+
+
     
 #def function = define
 
