@@ -11,7 +11,7 @@ import time
 
 time.sleep(3)
 size = 5
-values = string.ascii_uppercase + string.digits
+values = string.digits + string.ascii_uppercase
 password = ''
 for i in range(size):
     password += choice(values)
@@ -19,7 +19,7 @@ print(f"A senha da vez é {password}")
 
 time.sleep(3)
 size = 5
-values = string.ascii_uppercase + string.digits
+values = string.digits + string.ascii_uppercase
 attempt = ''
 for i in range(size):
     attempt += choice(values)
@@ -35,7 +35,7 @@ while attempt != password:
     print(attempt)
     max_attempts += 1
     if attempt == password or max_attempts == 9:
-        print('Chega fi, cabô')
+        print('Chega fi, cabô a graça')
         break
 
 ##Repetition
@@ -44,11 +44,11 @@ while True:
         max_attempts = 0
         time.sleep(3)
         size = 5
-        values = string.ascii_uppercase + string.digits
+        values = string.digits + string.ascii_uppercase
         password = ''
         for i in range(size):
             password += choice(values)
-    print(f"A senha da vez é {password}")
+        print(f"A senha da vez é {password}")
     while attempt != password:
         attempt = ''
         time.sleep(1)
@@ -57,8 +57,9 @@ while True:
         print(attempt)
         max_attempts += 1
         if attempt == password or max_attempts == 9:
-            print('Chega fi, cabô')
+            print('Chega fi, cabô a graça')
             break
+    
 
 
 
