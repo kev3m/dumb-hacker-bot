@@ -9,15 +9,15 @@ import time
 # string.ascii_uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 # string.digits = "0123456789"
 
-time.sleep(3)
+time.sleep(2)
 size = 5
-values = string.digits + string.ascii_uppercase
+values = string.digits + string.ascii_uppercase 
 password = ''
 for i in range(size):
     password += choice(values)
 print(f"A senha da vez é {password}")
 
-time.sleep(3)
+time.sleep(1)
 size = 5
 values = string.digits + string.ascii_uppercase
 attempt = ''
@@ -34,9 +34,12 @@ while attempt != password:
         attempt += choice(values)
     print(attempt)
     max_attempts += 1
-    if attempt == password or max_attempts == 9:
-        print('Chega fi, cabô a graça')
+    if attempt == password:
+        print('Well boys, we did it!')
         break
+    elif max_attempts == 9:
+            print('Chega fi, cabô a graça')
+            break
 
 ##Repetition
 while True:
@@ -56,7 +59,10 @@ while True:
             attempt += choice(values)
         print(attempt)
         max_attempts += 1
-        if attempt == password or max_attempts == 9:
+        if attempt == password:
+            print('Well boys, we did it!')
+            break
+        elif max_attempts == 9:
             print('Chega fi, cabô a graça')
             break
     
