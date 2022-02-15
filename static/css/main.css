@@ -1,0 +1,23 @@
+* {
+  padding: 0.4% 5%;
+  text-align: center;
+  background-color: #0e0e14;
+  font-family: 'DM Serif Text', serif;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.title h1 {
+  color: #efedec;
+}
+
+.title p {
+  margin-top: -25px;
+  color: #a7bcf7;
+  font-weight: 300;
+}
+
+.title img {
+  width: 30%;
+  min-width: 30%;
+}
+/*# sourceMappingURL=main.css.map */
